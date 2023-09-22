@@ -1,5 +1,5 @@
 import { Link, Outlet } from "react-router-dom";
-import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
+// import { ReactComponent as CrwnLogo } from "../../assets/crown.svg";
 import "./navigation.styles.scss";
 import { signOutUser } from "../../utils/firebase/firebase.utils";
 import { CartIcon } from "../../components/cart-icon/cart-icon.components";
@@ -15,7 +15,9 @@ const Navigation = () => {
         <>
             <div className="navigation">
                 <Link className="logo-container" to="/">
-                    <CrwnLogo className="logo" />
+                    <span className="logo">
+                        LIKOR
+                    </span>
                 </Link>
                 <div className="nav-links-container">
                     <Link className="nav-link" to="/shop">
