@@ -4,33 +4,33 @@ import "./directory.styles.scss";
 const categories = [
     {
       id: 1,
-      title: "hats",
-      imageUrl: "https://i.ibb.co/cvpntL1/hats.png",
-      route: 'shop/hats'
+      title: "Tequila",
+      imageUrl: "/images/tequila.jpg",
+      route: 'shop/tequila'
     },
     {
       id: 2,
-      title: "jackets",
-      imageUrl: "https://i.ibb.co/px2tCc3/jackets.png",
-      route: 'shop/jackets'
+      title: "Ron",
+      imageUrl: "/images/rum.jpg",
+      route: 'shop/ron'
     },
     {
       id: 3,
-      title: "sneakers",
-      imageUrl: "https://i.ibb.co/0jqHpnp/sneakers.png",
-      route: 'shop/sneakers'
+      title: "Whiskey",
+      imageUrl: "/images/whiskey.jpg",
+      route: 'shop/whiskey'
     },
     {
       id: 4,
-      title: "womens",
-      imageUrl: "https://i.ibb.co/GCCdy8t/womens.png",
-      route: 'shop/womens'
+      title: "Vodka",
+      imageUrl: "/images/vodka.jpg",
+      route: 'shop/vodka'
     },
     {
       id: 5,
-      title: "mens",
-      imageUrl: "https://i.ibb.co/R70vBrQ/men.png",
-      route: 'shop/mens'
+      title: "Gin",
+      imageUrl: "/images/gin.jpg",
+      route: 'shop/gin'
     },
   ];
 

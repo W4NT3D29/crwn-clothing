@@ -23,8 +23,9 @@
     display: flex;
     align-items: center;
     justify-content: flex-end;
-
+    flex: 1;
     .nav-link {
+      min-width: 66px;
       padding: 10px 15px;
       font-size: 18px;
       font-weight: bold;

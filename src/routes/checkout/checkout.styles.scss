@@ -1,5 +1,6 @@
 .checkout-container {
     width: 55%;
+    min-width: 500px;
     min-height: 90vh;
     display: flex;
     flex-direction: column;
@@ -9,8 +10,8 @@
     .checkout-header {
       width: 100%;
       padding: 10px 0;
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: repeat(5, 23%);
       border-bottom: 1px solid darkgrey;
   
       .header-block {
@@ -21,12 +22,19 @@
           width: 8%;
         }
       }
+      @media (max-width: 700px) {
+        grid-template-columns: 23% minmax(106px, 1fr) 23% minmax(auto, 1fr) 23%;
+      }
     }
   
     .total {
       margin-top: 30px;
       margin-left: auto;
       font-size: 36px;
+    }
+    @media (max-width: 700px) {
+      min-width: 350px;
+      margin: auto;
     }
   }
   

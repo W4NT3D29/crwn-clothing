@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { selectCartTotal } from "../../store/cart/cart.selector";
 import { selectCurrentUser } from "../../store/user/user.selector";
 import { useState } from "react";
+import Swal from "sweetalert2";
 
 const PaymentForm = () => {
     const stripe = useStripe();
@@ -41,10 +42,13 @@ const PaymentForm = () => {
         });
         setIsProccesingPayment(false)
         if (paymentResult.error) {
-            alert(paymentResult.error);
+            Swal.fire(paymentResult.error);
         } else {
             if (paymentResult.paymentIntent.status === "succeeded") {
-                alert("Payment Succesful");
+                Swal.fire({
+                    icon: 'success',
+                    title: "Payment Succesful"
+                });
             }
         }
     };
@@ -52,6 +56,7 @@ const PaymentForm = () => {
         <div className="payment-form-container">
             <form className="form-container" onSubmit={paymentHandler}>
                 <h2>Credit Card Payment: </h2>
+                <h4>for test Use: 4242 4242 4242 4242 - 04/24 - 242 - 42424</h4>
                 <CardElement />
                 <Button
                     isLoading={isProccesingPayment}

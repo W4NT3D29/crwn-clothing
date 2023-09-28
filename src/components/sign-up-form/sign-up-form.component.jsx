@@ -7,6 +7,7 @@ import {
 import FormInput from "../form-input/form-input.component";
 import "./sign-up-form.styles.scss";
 import Button from "../button/button.component";
+import Swal from "sweetalert2";
 
 const defaultFormFields = {
     displayName: "",
@@ -26,7 +27,10 @@ const SignUpForm = () => {
     const handleSubmit = async (event) => {
         event.preventDefault();
         if (password !== confirmPassword) {
-            alert("Passwords do not match");
+            Swal.fire({
+                icon: 'error',
+                title: "Passwords do not match"
+            });
             return;
         }
         try {
@@ -38,7 +42,10 @@ const SignUpForm = () => {
             resetFormFields();
         } catch (error) {
             if (error.code === "auth/email-already-in-use") {
-                alert("Cannot create user, email already in use");
+                Swal.fire({
+                    icon: 'error',
+                    title: "Cannot create user, email already in use"
+                });
             } else {
                 console.error("User creation encountered an error" + error);
             }
