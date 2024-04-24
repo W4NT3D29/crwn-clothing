@@ -16,7 +16,7 @@ const Navigation = () => {
             <div className="navigation">
                 <Link className="logo-container" to="/">
                     <span className="logo">
-                        LIKOR
+                        LICORIA
                     </span>
                 </Link>
                 <div className="nav-links-container">
